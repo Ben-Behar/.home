@@ -1,0 +1,17 @@
+#!/bin/bash
+echo Capturing...
+for f in ~/.*
+do
+  NAME=$(basename $f) # this is the name of the file without any directory info
+  if [ "$NAME" != "." ] && [ "$NAME" !=  ".." ] && [[ ! -L $f ]]
+  then # it is NOT a symbolic link
+      read -p "+ Want to capture $NAME ? (y/N):" -r
+      if [[ $REPLY =~ ^[Yy]$ ]]
+      then
+        printf "\ Capturing '$NAME'\n"
+        mv $f ~/.home/_$NAME && ln -s ~/.home/_$NAME $f
+      else
+        echo "| skip"
+      fi
+  fi
+done
