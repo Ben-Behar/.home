@@ -4,7 +4,7 @@
 
 #### Getting started
 
- * Fork this repo into a PRIVATE repository (so you don't do something dumb like accidentally broadcasting your ssh keys!!)
+ * Duplicate this repo into a PRIVATE repository (so you don't do something dumb like accidentally broadcasting your ssh keys!!)
  * Clone your PRIVATE forked repository into your $HOME directory.
  * Run the command `capture-dotfiles` and select which files you want to "capture" into the git repository history (again keep in mind what you want to remain private)
  * You should now see all of your dotfiles stored within the local repository prefixed with an `_`
